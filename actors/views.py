@@ -1,11 +1,11 @@
-from .models import Circle
+from .models import Actor
 from rest_framework import viewsets
-from .serializers import CircleSerializer
+from .serializers import ActorSerializer
 
-class CircleViewSet(viewsets.ModelViewSet):
+class ActorViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = Circle.objects.all()
-    serializer_class = CircleSerializer
+    queryset = Actor.objects.all()
+    serializer_class = ActorSerializer
 

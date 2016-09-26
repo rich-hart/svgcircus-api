@@ -2,7 +2,7 @@ from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 # FIXME: break up according to frontend conventions
-class Circle(models.Model):
+class Actor(models.Model):
     diameter = models.IntegerField(
         default = 10, 
         validators = [

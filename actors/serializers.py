@@ -1,10 +1,10 @@
 from rest_framework import serializers
-from .models import Circle
+from .models import Actor
 
 
-class CircleSerializer(serializers.HyperlinkedModelSerializer):
+class ActorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Circle
+        model = Actor
         fields = (
             'diameter',
             'x_position',

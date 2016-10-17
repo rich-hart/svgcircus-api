@@ -1,11 +1,13 @@
 from rest_framework import serializers
-from .models import Actor
+from .models import Actor, Color, Position
 
 
 class ActorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Actor
         fields = (
+            'name',
+            'shape',
             'diameter',
             'x_position',
             'y_position',
@@ -22,3 +24,21 @@ class ActorSerializer(serializers.HyperlinkedModelSerializer):
             'stroke_dash_size',
             'stroke_dash_gaps',
             )
+
+class ColorSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Color
+        fields = (
+            'red',
+            'blue',
+            'green',
+            'alpha',
+        )
+
+class PositionSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Position
+        fields = (
+            'x',
+            'y'
+        )
